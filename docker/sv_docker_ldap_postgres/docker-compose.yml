@@ -1,0 +1,29 @@
+# Usage: docker-compose up
+version: '3'
+
+services:
+  db:
+    image: postgres:11
+    volumes:
+      - "./volumes/postgresql/data:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: 7511fccf-3dd4-40c1-9136-6cd725435539
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+
+  ldap:
+    image: openidentityplatform/opendj:4.4.3
+    volumes:
+      - "./volumes/opendj/template/config/schema:/opt/opendj/template/config/schema"
+    ports:
+      - "389:1389"
+      - "636:1636"
+      - "4444:4444"
+    environment:
+      BASE_DN: "dc=scopxxx,dc=com"
+      ROOT_USER_DN: "cn=Manager"
+      ROOT_PASSWORD: "xxx"
+      PORT: 1389
+      LDAPS_PORT: 1636

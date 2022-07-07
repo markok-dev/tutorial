@@ -1,0 +1,75 @@
+﻿*******
+Tabelle
+*******
+DELETE FROM journal;
+DROP TABLE IF EXISTS journal;
+
+CREATE TABLE journal (
+   id                  BIGINT       NOT NULL,            -- primary key
+   personalAccountName VARCHAR(1000) NOT NULL,		  -- Kundenname
+   documentNumber      VARCHAR(1000) NOT NULL,        -- Buchungsnummer (format: 2010-0019)
+   documentText        VARCHAR(1000) NOT NULL,		  -- Buchungstext <INDEX-COLUMN>
+   date                BIGINT               ,        -- Erstellungszeitpunkt
+   type                VARCHAR(1000) NOT NULL,		  -- 'RECHNUNG' oder 'ZAHLUNG'
+   amount 			   numeric,						  -- Betrag
+   openAmount		   numeric,						  -- Betrag
+   junk                CHAR(1000),		              -- CHAR-Feld um realistische Größe zu erhalten
+   CONSTRAINT journal_pk PRIMARY KEY (id)
+);
+
+******************************
+Daten importieren in POSTGRES
+******************************
+Befehl für das Importieren der Testdaten. Sie sind im Ordner (sourceCode\Testdaten) zu finden.
+
+COPY journal FROM 'C:\my\programming\repos\javaexamples\javaExamples\src\marko\example\bachelor\DB\testDataFile.csv' DELIMITER ',' CSV
+
+******************
+* Indizes erstellen
+******************
+Befehle zur Indexerstellung sowie zum Anzeigen der Indizes der Datenbank.
+
+-- zeigt alle indizes der tabelle journal
+select * from pg_indexes where tablename = 'journal'; 
+
+
+----*B-TREE*
+	CREATE INDEX idx_documenttext_btree ON journal(documenttext varchar_pattern_ops);
+	drop index idx_documenttext_btree;
+	
+----*TRIGRAM*
+	create extension "pg_trgm"
+	
+	CREATE INDEX idx_documentText_tri_gin  ON "journal" USING gin("documenttext" gin_trgm_ops);
+	drop index idx_documentText_tri_gin;
+
+	CREATE INDEX idx_documentText_tri_gist ON "journal" USING gist("documenttext" gist_trgm_ops);
+	drop index idx_documentText_tri_gist;
+
+--fulltextsearch
+
+	Variante 1 (ohne tsvector spalte in der Tabelle): 
+		GIN:
+			CREATE INDEX journal_documenttext_gin_idx ON journal USING gin(to_tsvector('german', coalesce(documenttext,'')));
+		GIST:
+			CREATE INDEX journal_documenttext_gist_idx ON journal USING gist(to_tsvector('german', coalesce(documenttext,'')));
+	
+		Bsp.-Abfrage: 
+			SELECT * FROM journal WHERE to_tsvector('german', coalesce(documenttext, '')) @@ to_tsquery('german', 'RE.6301423');
+	
+	
+	
+	Variante 2 (mit tsvector spalte): 
+		Vorgehen:
+			1) ALTER TABLE journal ADD COLUMN documentTextTs tsvector;
+			2) UPDATE journal SET documentTextTs = to_tsvector('german', coalesce(documentText,''));
+			3) index erstellen
+		
+		GIN:
+			CREATE INDEX journal_fts_gin_idx ON journal USING gin(documentTextTs);
+		GIST:
+			CREATE INDEX journal_fts_gin_idx ON journal USING gist(documentTextTs);
+	
+		Bsp.-Abfrage:
+			SELECT * FROM journal WHERE documentTextTs @@ to_tsquery('german', 'RE.6301423');
+	  

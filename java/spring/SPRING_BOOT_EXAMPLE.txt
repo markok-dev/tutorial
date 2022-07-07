@@ -1,0 +1,8 @@
+***Spring with eclipse
+https://dzone.com/articles/creating-a-spring-boot-project-with-eclipse-and-ma
+
+***get started
+https://spring.io/guides/gs/spring-boot/
+
+***beans:
+https://www.baeldung.com/spring-bean

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe1fb4c7-c752-47ae-93f2-a2815e604451" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\mk\dev\gitrepos\tutorials\mavenUdemy\kursunterlage\Abschnitt_5\temp\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lydtcyVyxy2g40g8MUKKjQUdC9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe1fb4c7-c752-47ae-93f2-a2815e604451" name="Default Changelist" comment="" />
+      <created>1608573480142</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608573480142</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="325" key="GridCell.Tab.0.bottom" timestamp="1608574174452">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state width="1877" height="325" key="GridCell.Tab.0.bottom/0.0.1920.1170/1920.0.1920.1170@0.0.1920.1170" timestamp="1608574174452" />
+    <state width="1877" height="325" key="GridCell.Tab.0.center" timestamp="1608574174451">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state width="1877" height="325" key="GridCell.Tab.0.center/0.0.1920.1170/1920.0.1920.1170@0.0.1920.1170" timestamp="1608574174451" />
+    <state width="1877" height="325" key="GridCell.Tab.0.left" timestamp="1608574174451">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state width="1877" height="325" key="GridCell.Tab.0.left/0.0.1920.1170/1920.0.1920.1170@0.0.1920.1170" timestamp="1608574174451" />
+    <state width="1877" height="325" key="GridCell.Tab.0.right" timestamp="1608574174452">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state width="1877" height="325" key="GridCell.Tab.0.right/0.0.1920.1170/1920.0.1920.1170@0.0.1920.1170" timestamp="1608574174452" />
+  </component>
+</project>

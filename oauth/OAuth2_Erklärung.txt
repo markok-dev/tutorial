@@ -1,0 +1,98 @@
+https://auth0.com/
+http://www.bubblecode.net/en/2016/01/22/understanding-oauth2/ // generelle infos
+
+
+Grant = jemanden etwas gewähren / bewilligen / einräumen
+
+Credential = der Berechtigungsnachweis
+
+Bearer = der Überbringer/Träger
+
+********
+CLIENTS
+********
+Es gibt unterschiedliche Client-Arten:
+- confidential clients (confidential: vertraulich/vertrauenswürdig)
+	Web-Applikation, die auf einem Webserver läuft
+	Kann den "client-key" und "client-secret" schützen
+
+- public clients (öffentlich)
+	können nicht "client-secrets" geheim halten. Kann hijacked oder reverse-engeneered werden
+	
+
+
+
+************
+GRAND TYPES
+************
+Es gibt unterschiedliche Grand-Types:
+Die beschreiben unterschiedliche Möglichkeiten an die Access-Token und Refresh-Token zu gelangen.
+
+"Client Credentials Grant"
+
+"Password Grants" / "Resource-Owner-Credentials" - (Username-Password Authentification)
+
+"Authorization Code"
+
+"Implicit Grants"
+
+
+
+
+
+**************************
+*Client Credentials Grant*
+**************************
+
+The application authenticates with Auth0 using its Client Id and Client Secret.
+
+in der kommunikation zwischen einem "confidential-client" und dem server.
+machine-to-machine
+
+Geeignet für B2B-Transactions und Batch-Processes witout a Resource-Owner
+
+Info: kann Agindo nicht nutzen, weil der Client beim Kunden ausgeliefert ist. 
+Die Client-Id/Client-Secret könnte reverse-engeneered werden.
+
+URL: https://auth0.com/docs/api-auth/grant/client-credentials
+
+
+
+*****************************************************************************************
+"Password Grants" / "Resource-Owner-Credentials" - (Username-Password Authentification)
+*****************************************************************************************
+grant_type = password
+
+- Es wird mit dem Username und Passwort ein Acces-Token und Refresh-Token geholt.
+
+Bsp.: Agindo sollte diese Art nicht nutzen können. Sie sollen das Passwort und den Benutzernamen vom
+      Scopevisio-Nutzer nicht wissen.
+
+
+
+**********************************
+Authorization Code / "Code Grant" - Mit redirect, zu dem der Access/Refresh-Token gegeben wird
+**********************************
+https://www.youtube.com/watch?v=CPbvxxslDTU //Generell Infos incl. Beispiel des Code-Grants
+https://www.youtube.com/watch?v=1ZX7554l8hY //OAuth Grant Types
+
+Wird für Applikationen benutzt, die auf Webseiten laufen.
+Agindo schickt zu SV eine "Callback URL". Diese wird aufgerufen, nachdem die Authentifizierung auf der SV-Seite erfolgreich war.
+Auf diese Callback-URL werden dann der Access-Token und Refresh-Token geschickt.
+
+***************
+Implicit Types
+***************
+Ähnlich dem Authorization-Grand-Type. Der unterschied ist, dass ein AccessToken erwartet wird, anstatt einem code
+
+Hier erhält man einen Access-Token, der nur für eine bestimmte dauer gültig ist (wie so typisch für einen Access-Token).
+Man erhält keinen Refresh-Token -> Nach Ablauf des Access-Token kann man sich somit nicht einen neuen holen.
+
+für public clients
+
+
+
+
+
+
+
