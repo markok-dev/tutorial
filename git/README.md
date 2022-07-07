@@ -95,6 +95,16 @@ git reset --hard HEAD
 git reset bla.txt HEAD	#Änderung der Datei bla.txt aus dem Stage-Bereich entfernen / im workspace bleibt sie erhalten
 ```
 
+# wie date ich mein branch up, indem ich den master in den branch hole?
+konkret zu deiner Frage: mache lokal auf einem non-master Branch immer per Rebase ein Update, konkret sowas geht fast immer:
+```git
+git stash
+git fetch
+git rebase origin/master
+git push -f
+git stash pop
+```
+ob du das "darfst": lokal bist du der Herr im Haus, da kannst du machen was du willst, allerdings ist der Moment mit git push -f dann unangenehm, wenn du mit deinen Teammitgliedern auf demselben Branch arbeitest. Dann musst du den Rebase/Forced Push ankündigen, im Worst Case es eben nicht tun und warten, bis alle davon Betroffenen bereit dazu sind (sie haben dann ja lokal eine abweichende History).
 
 # Vorgehen Feature-Branch in master mergen
 Anmerkung von Stepan:   
