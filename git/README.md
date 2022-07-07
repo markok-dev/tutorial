@@ -17,7 +17,9 @@ WORKSPACE	->	STAGE/INDEX-BEREICH	->	LOCAL REPOSITORY	-> 	remote REPOSITORY
 
 										<-
 										fetch	
-
+										
+![alt text](img/git_areas.jfif)
+									
 
 ## HEAD
 Woher weiß Git, welchen Branch Du momentan verwendest? Dafür gibt es einen speziellen Zeiger mit dem Namen HEAD.
