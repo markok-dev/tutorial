@@ -91,11 +91,13 @@ git reset bla.txt HEAD	#Änderung der Datei bla.txt aus dem Stage-Bereich entfer
 # wie date ich mein branch up, indem ich den master in den branch hole?
 Wenn ihr auf einem Featurebranch die Commits vom master reinziehen wollt, dann empfehle ich einen Rebase. Eure Änderungen werden dabei "hinten" an die History des master gehangen, was auch dazu führt, dass die Git Hashes sich ändern (das ist der Grund, warum das mit den anderen Entwicklern auf dem Branch kommuniziert/koordieniert werden muss). In der Shell sieht das dann in etwa so aus, Voraussetzung ist, dass ihr gerade auf dem Feauture Branch seid:
  
+```
 git stash # legt non-commited changes auf Seite
 git fetch origin/master # holt die remote liegenden Commits, dabei wird nicht der lokale mastergeändert
 git rebase origin/master # schiebt eure Commits ans Ende von origin/master
 git push -f # ACHTUNG, hier ist der breaking change für alle anderen, die an demselben Branch arbeiten!
 git stash pop # holt die anfangs auf Seite geschobenen Änderungen wieder ins working dir
+```
  
 In den IDEs gibt's dafür meist Shortcuts (der forced push ist nicht enthalten, das muss dann manuell gemacht werden), IntelliJ hat beispielsweise CMD+T (Windows wohl CTRL+T oder so) mit der Option "Rebase", Eclipse kenne ich leider zu wenig.
 
