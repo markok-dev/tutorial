@@ -93,7 +93,7 @@ Wenn ihr auf einem Featurebranch die Commits vom master reinziehen wollt, dann e
  
 ```
 git stash # legt non-commited changes auf Seite
-git fetch origin/master # holt die remote liegenden Commits, dabei wird nicht der lokale mastergeändert
+git fetch origin/master # holt die remote liegenden Commits, dabei wird nicht der lokale mastergeändert //mk: bei mir `git fetch origin main`
 git rebase origin/master # schiebt eure Commits ans Ende von origin/master
 git push -f # ACHTUNG, hier ist der breaking change für alle anderen, die an demselben Branch arbeiten!
 git stash pop # holt die anfangs auf Seite geschobenen Änderungen wieder ins working dir
