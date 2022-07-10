@@ -180,7 +180,7 @@ https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit
 `git log -3`   
 nur die letzten 3 commits anzeigen
 
-`git log --oneline` 
+`git log --oneline`    
 nur eine zeile je commit
 
 `git log --stat`   
