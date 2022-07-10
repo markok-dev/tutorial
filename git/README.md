@@ -108,13 +108,6 @@ a special case: it combines fetch and either a merge or a rebase - depending on 
 options, when you want to merge a pull request into the branch:    
 ![](img/optionsOnPullRequestMerge.PNG)
 
-
-## reset
-```
-git reset --hard HEAD   
-git reset bla.txt HEAD	#Änderung der Datei bla.txt aus dem Stage-Bereich entfernen / im workspace bleibt sie erhalten
-```
-
 # wie date ich mein branch up, indem ich den master in den branch hole?
 Wenn ihr auf einem Featurebranch die Commits vom master reinziehen wollt, dann empfehle ich einen Rebase. Eure Änderungen werden dabei "hinten" an die History des master gehangen, was auch dazu führt, dass die Git Hashes sich ändern (das ist der Grund, warum das mit den anderen Entwicklern auf dem Branch kommuniziert/koordieniert werden muss). In der Shell sieht das dann in etwa so aus, Voraussetzung ist, dass ihr gerade auf dem Feauture Branch seid:
  
