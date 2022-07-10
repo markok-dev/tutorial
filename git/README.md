@@ -79,6 +79,14 @@ möchte man die commit-message vom letzten commit ändern, der noch nicht gepush
 weitere nützliche infos zu commit-message-Änderungen:   
 https://gist.github.com/nepsilon/156387acf9e1e72d48fa35c4fabef0b4#file-git-change-commit-messages-md     
 
+## add rückgängig machen
+- Einen add rückgangig machen. Also eine Datei aus dem staging holen.   
+```
+```
+
+## commit ohne push rückgängig machen
+Eine Datei aus dem  holen
+
 ## PULL
 `git pull`	
 a special case: it combines fetch and either a merge or a rebase - depending on how you've got git configured    
