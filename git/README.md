@@ -147,6 +147,14 @@ In den branch gehen, in dem man die Änderungen von dem anderen Branch holen mö
 rebasing abbrechen (falls ggf. Konflikte aufgetreten sind)   
 `git rebase --abort`
 
+## Stand zu einem gewissen commit auschecken
+
+``` git
+git checkout <commit-hash>
+```
+checkt den kompletten stand zu einem bestimmten commit aus.   
+dies erzeugt ein detached head.   
+
 
 ## detached HEAD
 https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit    
