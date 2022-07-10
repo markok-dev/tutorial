@@ -86,11 +86,18 @@ git restore --staged <filename>
 ```
 
 ## commit ohne push rückgängig machen
-Eine Datei aus dem lokalen repository holen    
+Eine Datei aus dem lokalen repository holen.    
 
+Holt den commit in den stage bereich. Der Commit bleibt wegen lokal --soft erhalten.
 ```
 git reset --soft HEAD~1
 ```
+
+Löscht den commit vollständig. Die mit dem commit vorgenommene Änderung geht verloren.   
+```
+git reset --hard HEAD~1
+```
+
 
 
 ## PULL
