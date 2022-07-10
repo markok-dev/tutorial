@@ -155,6 +155,7 @@ git checkout <commit-hash>
 checkt den kompletten stand zu einem bestimmten commit aus.   
 dies erzeugt ein detached head.   
 
+"This exact state - when a specific commit is checked out instead of a branch - is what's called a "detached HEAD"."
 
 ## detached HEAD
 https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit    
