@@ -157,6 +157,18 @@ dies erzeugt ein detached head.
 
 "This exact state - when a specific commit is checked out instead of a branch - is what's called a "detached HEAD"."
 
+#### um einen stand auszuchecken und den detached HEAD zu verhindern
+Man kann einen Branch auf Basis eines commits erzeugen. Dann hat der branch den Stand zu dem Commit.     
+
+```
+git checkout -b test-branch 56a4e5c08
+...do your thing...
+git checkout master
+git branch -d test-branch
+```
+
+
+
 ## detached HEAD
 https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit    
 
