@@ -314,7 +314,7 @@ https://sourcegear.com/diffmerge/downloaded.php
 git config --list //es gibt ein global/system/local File (unterschied? Welcher wird wann gezogen?)
 
 
-## infosites:
+## infosites
 - info zu push und pull   
 http://de.gitready.com/beginner/2009/01/21/pushing-and-pulling.html
    
