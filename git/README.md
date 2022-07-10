@@ -82,10 +82,12 @@ https://gist.github.com/nepsilon/156387acf9e1e72d48fa35c4fabef0b4#file-git-chang
 ## add rückgängig machen
 - Einen add rückgangig machen. Also eine Datei aus dem staging holen.   
 ```
+git restore --staged <filename>
 ```
 
 ## commit ohne push rückgängig machen
-Eine Datei aus dem  holen
+Eine Datei aus dem lokalen repository holen    
+
 
 ## PULL
 `git pull`	
