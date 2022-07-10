@@ -88,6 +88,10 @@ git restore --staged <filename>
 ## commit ohne push rückgängig machen
 Eine Datei aus dem lokalen repository holen    
 
+```
+git reset --soft HEAD~1
+```
+
 
 ## PULL
 `git pull`	
