@@ -73,7 +73,8 @@ __ablauf - Vermeidung von merge-commits beim commit__:
 ## Commit Message ändern
 `git commit --amend`    
 möchte man die commit-message vom letzten commit ändern, der noch nicht gepushed ist  
-weitere nützliche infos zu commit-message-Änderungen: https://gist.github.com/nepsilon/156387acf9e1e72d48fa35c4fabef0b4#file-git-change-commit-messages-md     
+weitere nützliche infos zu commit-message-Änderungen:   
+https://gist.github.com/nepsilon/156387acf9e1e72d48fa35c4fabef0b4#file-git-change-commit-messages-md     
 
 ## PULL
 `git pull`	
