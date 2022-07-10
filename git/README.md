@@ -190,10 +190,10 @@ nur statistiken anzeigen
 zeigt commits, die aber noch nicht gepushed wurden
 
 ## DIFF
-`git diff`  
+`git diff`    
 
-workspace vs stage
-`git diff --staged`  
+workspace vs stage    
+`git diff --staged`    
 
 stage vs. repository
 
