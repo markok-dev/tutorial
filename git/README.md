@@ -10,9 +10,12 @@ festlegen, dass jeder commit verifiziert werden soll `git config commit.gpgsign 
 macht man das nicht, muss man dies bei jedem commit angeben: `git commit -S -m "your commit message"`   
 
 # GIT							
-![alt text](img/git_areas.jfif)
+![](img/git_areas.jfif)
 
 Index = Stage = Staging Area   
+
+# Git Movements
+![](git_reset.jpg)
 
 ## HEAD
 Woher weiß Git, welchen Branch Du momentan verwendest? Dafür gibt es einen speziellen Zeiger mit dem Namen HEAD.
