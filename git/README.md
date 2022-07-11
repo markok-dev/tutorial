@@ -1,3 +1,8 @@
+# links todo
+- https://ohshitgit.com/    
+
+- https://www.git-tower.com/blog/force-push-in-git/
+
 # Git hooks
 https://kiwidamien.github.io/prevent-big-commits.html
 
