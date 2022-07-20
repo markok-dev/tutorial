@@ -6,6 +6,12 @@ repo with tutorials
 
 
 # TODOS
+- https://en.wikipedia.org/wiki/Brotli   (quelle: stepan web-temcall) 
+- https://de.wikipedia.org/wiki/HTTP_ETag (quelle: stepan web-temcall)
+- https://socket.io/ (quelle: stepan web-temcall)
+- https://github.com/async-labs (quelle: stepan web-temcall)
+- https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API (quelle: stepan web-temcall)
+
 - ITEXT - pdf bibliothek(splitten/zusammenführen etc) - https://itextpdf.com/ 
 - graphviz - https://graphviz.org/ - graphen bibliothek
 - https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html (password hasing + storing)
