@@ -1,5 +1,7 @@
 # Java Script Date
 
+http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns    
+
 ### Tags
 javaScript, date, time, timezone, formatting, date-formatting,
 
